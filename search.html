@@ -1,0 +1,83 @@
+
+	<  html  >  
+			< style  >  
+				<body  #myinput {
+					background - image:URL   ('/img /search.png');
+					background - position:5px 10px ; 
+					background-size:40px ;  
+					background-repeat:No-repeat;
+					width:100%;
+					box-sizing :  border-box ;  
+					font-size:16px;
+					padding:12px  20px  12px  40px ;  
+					border:1px  solid  #ddd ;
+					margin-bottom:12px;
+					}
+					.#myUL{
+						list-style-type:none;
+						padding:0;
+						Margin:0;
+						}
+						.#myUL li  a {
+							border:1px  solid  #ddd;
+							margin - top:1px;
+							background-color:#f6f6f6;
+							Padding:12px;
+							text-decoration:none;
+							font-size:18px;
+							color:black;
+							display:block;
+							}  
+							.#myUL  li .header{
+								background-color:#e2e2e2;
+								cursor:default;
+								}  
+								.#myUL li a:hover:not (header){
+									background-color:#eee;
+									}
+									</style>
+		
+									<h2>Agriculture </h2>
+									<input  type="text" id="myinput"
+									onkeyup ="myfunction ()" placeholder="search  here..." 
+title="type  in  a  name  ">
+								<ul  id="myul">
+									<li><a href="#" class="header">A </a></li>
+									<li><a href="#">arachides</a></li>
+									<li><a href ="#">ananas</a></li>
+									<li><a href="#">amende </><li>
+										<li><a href="#" class="header">B </a></li>
+										<li><a href="#">beet </a></li>
+										<li><a href="#">banane </a></li>
+										<li><a href="#">betrave </a></li >
+										<li><a href="#" class="header">C </a></li>
+										<li><a href="#">carottes</a></li  >
+										<li><a href="#">charlotte</a></li  >
+										<li><a href="#">citrons</a></li>
+										</ul>
+										<script>
+										/*declare variables  */
+										function  myfunction(){
+											Var  input,filter,ul,li,a,i;
+											input=document.getElementById("myinput;
+											filter=input.value.toUpperCase ();
+											ul=document.getElementById("myUL");
+											li=ul . getElementByTagName("li");
+											/*loop through all list  items,and  hide those  Who  don't match the  search  query */
+											for   (i=0; i <li.length; i++){
+												a=li [i].getElementByTagName ("a")[0]
+												if   (a.innerHTML.to UpperCase ()
+												.indexof (filter)>-1){
+													li [i].style.display=" ";
+													}else{
+														li [i].style.display="none";
+														}  
+													}  
+												}  
+														</script>
+														</body>
+														</html>
+														
+								
+							
+					
