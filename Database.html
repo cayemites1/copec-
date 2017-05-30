@@ -1,0 +1,27 @@
+< !  Doctype  html  >  
+<  html  >  
+<  head  >  
+<  title  >  agribek  3 creating MySQL  Database </  title  >  
+<  /  head  >  
+<  body  >  
+< ? PHP  
+$dbhost=  'localhost:3036';
+$dbuser='root ';
+$dbpass='rootpassword';
+$conn=mysql_connect ($dbhost, $dbuser, $dbpass);
+if  ( ! $conn)  
+{  
+die ('could not connet:',mysql_error ()  );
+}  
+echo  'connected successfully <br/>';
+$sql ='create  Database  Tutorials  ';
+$retval=mysq_query ($sql, $conn);
+if   (! $retva)
+{  
+die ('could not create batabase:',mysql_error ();
+}  
+echo  "Database  Tutorials  created successfully  \n";
+mysql_close ($conn);
+?>
+<  /  body  >  
+<  /  html  >  
